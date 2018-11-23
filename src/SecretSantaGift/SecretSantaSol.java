@@ -12,10 +12,9 @@ public class SecretSantaSol {
     public static void main(String[] args) throws IOException {
         //Family Members
         List<String> participants = new ArrayList<>(Arrays.asList("1 abc","2 def","3 ghi", "4 jkl", "5 mno"));
-        List<String> giftReceiver = (ArrayList<String>) ((ArrayList<String>)participants).clone();
 
         //Pair family members
         final SSPair match = new SSPair();
-        match.ssMatch(participants, giftReceiver);
+        match.ssMatch(participants);
     }
 }

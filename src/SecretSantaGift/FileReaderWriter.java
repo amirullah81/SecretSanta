@@ -40,7 +40,7 @@ public class FileReaderWriter {
         try{
             //FileRWriter write text files in the default encoding.
             FileOutputStream is = new FileOutputStream(fileName);
-            
+
             OutputStreamWriter ows = new OutputStreamWriter(is);
             Writer writer = new BufferedWriter(ows);
 

@@ -1,6 +1,7 @@
 package SecretSantaGift;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -9,8 +10,9 @@ import java.util.Random;
  * Created by amirullah on 11/21/18.
  */
 public class SSPair {
-    void ssMatch(List<String> ssParticipants, List<String> ssGiftReceiver) throws IOException{
+    void ssMatch(List<String> ssParticipants) throws IOException{
 
+        List<String> ssGiftReceiver = (ArrayList<String>) ((ArrayList<String>)ssParticipants).clone();
         FileReaderWriter fileReaderWriter = new FileReaderWriter();
         String path = System.getProperty("user.dir")+"/Resources/Count.txt";
         int years = fileReaderWriter.fileReader(path);
